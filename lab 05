@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main
+{
+
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the price of the item: $");
+        double itemPrice = scanner.nextDouble();
+
+        double shippingCost = calculateShippingCost(itemPrice);
+        double totalPrice = itemPrice + shippingCost;
+
+        System.out.printf("Shipping cost: $%.2f%n", shippingCost);
+        System.out.printf("Total price: $%.2f%n", totalPrice);
+    }
+
+    public static double calculateShippingCost(double itemPrice)
+    {
+        if (itemPrice >= 100) {
+            return 0; }
+        else {
+            return 0.02 * itemPrice; }
+    }
+}
